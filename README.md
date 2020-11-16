@@ -1,5 +1,64 @@
-# SQL-Challenge
+## Learning PGAdmin and Postres SQL includes 8 solutions. 
 
-This assignment was interesting and I was easily able to get through the 8 solutions within PGAdmin. 
-I struggled with the bonus I really wanted to solve and create the  2 visualizations but finally was learned how to import the querys and create some visualizations.  
-I tried my best to provide what was needed in this bonus and got as close as possible to the 2 plots neeeded for the extra credit.. I added a couple more plots since I worked on this for an extra week it wasn't till 1 day ago I learned how to import the queries and not only the DB..  This was a great learning experiance. 
+![imageAlt](https://github.com/dsalisbury1141/PostgresSQL/blob/master/ERD/Dsalisbury1141%20ERD%20diagram.png)!
+
+Also learning how to import queries form PostgresSQL into JupyterLab using Pythin Pandas.  
+
+![imageAlt](https://github.com/dsalisbury1141/PostgresSQL/blob/master/EmployeeSQL/Bonus/Salary_Plot1.png)!
+![imageAlt](https://github.com/dsalisbury1141/PostgresSQL/blob/master/EmployeeSQL/Bonus/Salary_Plot2.png)!
+![imageAlt](https://github.com/dsalisbury1141/PostgresSQL/blob/master/EmployeeSQL/Bonus/Salary_Plot3.png)!
+
+![imageAlt](https://github.com/dsalisbury1141/PostgresSQL/blob/master/EmployeeSQL/Bonus/Bonus%20SQL.ipynb)!
+
+
+## ERD Code 
+CREATE TABLE "employees" (
+  "emp_no" varchar,
+  "emp_title_id" varchar,
+  "birth_date" date,
+  "first_name" varchar(30),
+  "last_name" varchar(30),
+  "sex" varchar(1),
+  "hire_date" date,
+  PRIMARY KEY ("emp_no")
+);
+
+CREATE INDEX "FK" ON  "employees" ("emp_title_id");
+
+CREATE TABLE "titles" (
+  "title_id" varchar,
+  "title" varchar(50)
+);
+
+CREATE INDEX "PK " ON  "titles" ("title_id");
+
+CREATE TABLE "dept_emp" (
+  "emp_no" int,
+  "dept_no" varchar
+);
+
+CREATE INDEX "FK" ON  "dept_emp" ("emp_no");
+
+CREATE INDEX "PK " ON  "dept_emp" ("dept_no");
+
+CREATE TABLE "salaries" (
+  "emp_no" int,
+  "salary" int
+);
+
+CREATE INDEX "Pk FK" ON  "salaries" ("emp_no");
+
+CREATE TABLE "dept_manager" (
+  "dept_no" int,
+  "emp_no" int
+);
+
+CREATE INDEX "PK " ON  "dept_manager" ("dept_no");
+
+CREATE INDEX "FK" ON  "dept_manager" ("emp_no");
+
+CREATE TABLE "departments" (
+  "dept_no" varchar,
+  "dept_name" varchar(50),
+  PRIMARY KEY ("dept_no")
+);
