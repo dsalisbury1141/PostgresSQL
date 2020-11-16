@@ -2,15 +2,6 @@
 
 ![imageAlt](https://github.com/dsalisbury1141/PostgresSQL/blob/master/ERD/Dsalisbury1141%20ERD%20diagram.png)
 
-Also learning how to import queries form PostgresSQL into JupyterLab using Pythin Pandas.  
-
-![imageAlt](https://github.com/dsalisbury1141/PostgresSQL/blob/master/EmployeeSQL/Bonus/Salary_Plot1.png)
-![imageAlt](https://github.com/dsalisbury1141/PostgresSQL/blob/master/EmployeeSQL/Bonus/Salary_Plot2.png)
-![imageAlt](https://github.com/dsalisbury1141/PostgresSQL/blob/master/EmployeeSQL/Bonus/Salary_Plot3.png)
-
-![imageAlt](https://github.com/dsalisbury1141/PostgresSQL/blob/master/EmployeeSQL/Bonus/Bonus%20SQL.ipynb)
-
-
 ## ERD Code 
 CREATE TABLE "employees" (
   "emp_no" varchar,
