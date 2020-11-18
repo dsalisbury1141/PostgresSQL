@@ -53,3 +53,7 @@ CREATE TABLE "departments" (
   "dept_name" varchar(50),
   PRIMARY KEY ("dept_no")
 );
+
+How to run my code:
+1. Download Repository 
+2. Open PGadmin and import file then run code above
